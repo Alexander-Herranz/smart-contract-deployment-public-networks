@@ -1,27 +1,40 @@
-# Smart Contract deployment on Alastria networks
+# Smart Contract deployment on public EVM networks
 
-This repository provides practical example to deploy Smart Contracts in both T and B networks, following different approaches:
+This repository provides practical example to deploy Smart Contracts in different public EVM networks, following different approaches:
+
+## Testnet networks
+
+#### Add ETH Goerli (testnet) information
+
+- **Network:** Ethereum Goerli 
+- **New RPC URL:** https://goerli.infura.io/v3/
+- **Chain ID:** 5
+- **Currency symbol:** ETH
+- **Block explorer:** https://goerli.etherscan.io/
+- **Faucet:** https://goerlifaucet.com/
+
+#### Add Polygon Mumbai (testnet) information
+
+- **Network:** Polygon Mumbai 
+- **New RPC URL:** https://rpc-mumbai.maticvigil.com/
+- **Chain ID:** 80001
+- **Currency symbol:** MATIC
+- **Block explorer:** https://mumbai.polygonscan.com/
+- **Faucet:** https://faucet.polygon.technology/
+
+#### Add Binance Smart Chain (testnet) information
+
+- **Network:** Smart Chain - Testnet 
+- **New RPC URL:** https://data-seed-prebsc-1-s1.binance.org:8545/
+- **Chain ID:** 97
+- **Currency symbol:** BNB
+- **Block explorer:** https://testnet.bscscan.com
+- **Faucet:** https://testnet.bnbchain.org/faucet-smart
+
+More info here: https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain
+
 
 ## Remix
-
-#### Metamask: Add T Network information
-
-- **Network:** T Network
-- **New RPC URL:** http://YOUR_NODE_IP:22000
-- **Chain ID:** 83584648538
-
-
-#### Metamask: Add B Network information
-
-- **Network:** B Network
-- **New RPC URL:** http://YOUR_NODE_IP:8545
-- **Chain ID:** 2020
-
-
-#### Mandatory options for T Network 
-These options also work for B Network, but are only mandatory for T Network.
-
-<img src="https://ik.imagekit.io/alastria/options_for_t_network.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656492606348" alt="RemixDeploy" width="400">
 
 #### Remix: Deployment (left side)
 Just click on the "Deploy" button when your Smart Contract is ready.
