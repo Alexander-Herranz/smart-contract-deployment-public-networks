@@ -4,7 +4,7 @@ This repository provides practical example to deploy Smart Contracts in differen
 
 ## Testnet networks
 
-#### Add ETH Goerli (testnet) information
+### Ethereum Goerli (testnet) information
 
 - **Network:** Ethereum Goerli 
 - **New RPC URL:** https://goerli.infura.io/v3/
@@ -13,7 +13,7 @@ This repository provides practical example to deploy Smart Contracts in differen
 - **Block explorer:** https://goerli.etherscan.io/
 - **Faucet:** https://goerlifaucet.com/
 
-#### Add Polygon Mumbai (testnet) information
+### Polygon Mumbai (testnet) information
 
 - **Network:** Polygon Mumbai 
 - **New RPC URL:** https://rpc-mumbai.maticvigil.com/
@@ -22,7 +22,9 @@ This repository provides practical example to deploy Smart Contracts in differen
 - **Block explorer:** https://mumbai.polygonscan.com/
 - **Faucet:** https://faucet.polygon.technology/
 
-#### Add Binance Smart Chain (testnet) information
+More infor here: https://wiki.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/
+
+### Binance Smart Chain (testnet) information
 
 - **Network:** Smart Chain - Testnet 
 - **New RPC URL:** https://data-seed-prebsc-1-s1.binance.org:8545/
@@ -36,15 +38,17 @@ More info here: https://academy.binance.com/en/articles/connecting-metamask-to-b
 
 ## Remix
 
+
+#### Metamask: Network selection
+You have to select your preffered network form Metamask.
+
+<img src="https://ik.imagekit.io/alastria/selection_of_alastria_network.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656492649058" alt="Metamask1" width="400">
+
+
 #### Remix: Deployment (left side)
 Just click on the "Deploy" button when your Smart Contract is ready.
 
 <img src="https://ik.imagekit.io/alastria/Remix-deploy?ik-sdk-version=javascript-1.4.3&updatedAt=1654784727263" alt="Remix1" width="400">
-
-#### Metamask: Network selection
-You have to select your Alastria Network form Metamask.
-
-<img src="https://ik.imagekit.io/alastria/selection_of_alastria_network.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656492649058" alt="Metamask1" width="400">
 
 
 #### Metamask: Confirm transaction
@@ -77,13 +81,13 @@ npm i
 #### Deployment in T Network
 ```sh
 truffle compile
-truffle migrate --network alastriat
+truffle migrate --network DESIRED_NETWORK
 ```
 
 #### Deployment in B Network
 ```sh
 truffle compile
-truffle migrate --network alastriab
+truffle migrate --network DESIRED_NETWORK
 ```
 
 ## Hardhat
@@ -94,18 +98,10 @@ npm init
 npm install --save-dev hardhat
 ```
 
-#### Deployment in T Network
+#### Deployment 
 ```sh
 npx hardhat clean
 npx hardhat compile
-npx hardhat run ./scripts/deploy.ts --network t_alastria
+npx hardhat run ./scripts/deploy.ts --network DESIRED_NETWORK
 ```
-
-#### Deployment in B Network
-```sh
-npx hardhat clean
-npx hardhat compile
-npx hardhat run ./scripts/deploy.ts --network b_alastria
-```
-
 
