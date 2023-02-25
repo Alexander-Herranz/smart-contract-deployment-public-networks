@@ -14,6 +14,8 @@ These networks are specified in networks section in both files (you can add new 
 - Truffle/truffle-config.js
 - Hardhat/hardhat.config.ts
 
+If you have problems with RPC URLs (they change from time to time) check last ones here: https://rpc.info/
+
 
 ## Testnet networks
 
