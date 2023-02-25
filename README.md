@@ -2,6 +2,19 @@
 
 This repository provides practical example to deploy Smart Contracts in different public EVM networks, following different approaches:
 
+## Prerequisites
+Node JS installed: https://nodejs.org/
+
+DESIRED_NETWORK variable can be: 
+- ethereum_goerli_testnet
+- polygon_mumbai_testnet
+- binance_bsc_testnet
+
+These networks are specified in networks section in both files (you can add new ones):
+- Truffle/truffle-config.js
+- Hardhat/hardhat.config.ts
+
+
 ## Testnet networks
 
 ### Ethereum Goerli (testnet) information
