@@ -5,19 +5,32 @@ require("dotenv").config();
 const private_key = process.env.SIGNER_PRIVATE_KEY;
 
 module.exports = {
+  plugins: [
+    'truffle-plugin-verify'
+  ],
+  api_keys: {
+    etherscan: process.env.ETH_SCAN_API_KEY,
+    polygonscan: process.env.POLYGON_SCAN_API_KEY,
+    bscscan: process.env.BSC_SCAN_API_KEY
+  },
   networks: {
-    alastriat: {
-      gasPrice: 0x0,
-      provider: () => new HDWalletProvider(private_key, process.env.T_NODE_IP),
-      network_id: 83584648538,
+    ethereum_goerli_testnet: {
+      provider: () => new HDWalletProvider(private_key, process.env.ETH_GOERLI_TESTNET_RPC),
+      network_id: 5,
       confirmations: 2,
       timeoutBlocks: 200,
       skipDryRun: true
     },
-    alastriab: {
-      gasPrice: 0x0,
-      provider: () => new HDWalletProvider(private_key, process.env.B_NODE_IP),
-      network_id: 2020,
+    polygon_mumbai_testnet: {
+      provider: () => new HDWalletProvider(private_key, process.env.POLYGON_MUMBAI_TESTNET_RPC),
+      network_id: 80001,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
+    binance_bsc_testnet: {
+      provider: () => new HDWalletProvider(private_key, process.env.BSC_TESTNET_RPC),
+      network_id: 97,
       confirmations: 2,
       timeoutBlocks: 200,
       skipDryRun: true
@@ -26,12 +39,12 @@ module.exports = {
   compilers: {
     solc: {
       version: "0.8.1",
+      parser: "solcjs",
       settings: {
         optimizer: {
-          enabled: true,
-          runs: 200,
-        },
-        evmVersion: "byzantium"
+          enabled: false,
+          runs: 200
+        }
       }
     }
   }

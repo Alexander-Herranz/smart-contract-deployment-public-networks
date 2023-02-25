@@ -1,4 +1,4 @@
-## Hardhat Guide 
+## Hardhat Guide
 
 #### Installation
 ```sh
@@ -6,17 +6,21 @@ npm init
 npm install --save-dev hardhat
 ```
 
-#### Deployment in T Network
+#### Deployment
 ```sh
 npx hardhat clean
 npx hardhat compile
-npx hardhat run ./scripts/deploy.ts --network t_alastria
+npx hardhat run ./scripts/deploy.ts --network DESIRED_NETWORK
 ```
 
-#### Deployment in B Network
+#### Verification
 ```sh
-npx hardhat clean
-npx hardhat compile
-npx hardhat run ./scripts/deploy.ts --network b_alastria
+npx hardhat verify --network DESIRED_NETWORK DEPLOYED_CONTRACT_ADDRESS
 ```
 
+#### Example with Goerli Network
+```sh
+npx hardhat run ./scripts/deploy.ts --network ethereum_goerli_testnet
+npx hardhat verify --network ethereum_goerli_testnet 0x...
+
+```

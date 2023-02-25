@@ -6,16 +6,19 @@ This repository provides practical example to deploy Smart Contracts in differen
 
 ### Ethereum Goerli (testnet) information
 
-- **Network:** Ethereum Goerli 
+- **Network:** Ethereum Goerli
 - **New RPC URL:** https://goerli.infura.io/v3/
 - **Chain ID:** 5
 - **Currency symbol:** ETH
 - **Block explorer:** https://goerli.etherscan.io/
 - **Faucet:** https://goerlifaucet.com/
 
+
+Verified: https://goerli.etherscan.io/address/0x8058D97E9b95374E11e270A008D9f57D6490Ba69#code
+
 ### Polygon Mumbai (testnet) information
 
-- **Network:** Polygon Mumbai 
+- **Network:** Polygon Mumbai
 - **New RPC URL:** https://rpc-mumbai.maticvigil.com/
 - **Chain ID:** 80001
 - **Currency symbol:** MATIC
@@ -26,7 +29,7 @@ More infor here: https://wiki.polygon.technology/docs/develop/metamask/config-po
 
 ### Binance Smart Chain (testnet) information
 
-- **Network:** Smart Chain - Testnet 
+- **Network:** Smart Chain - Testnet
 - **New RPC URL:** https://data-seed-prebsc-1-s1.binance.org:8545/
 - **Chain ID:** 97
 - **Currency symbol:** BNB
@@ -35,9 +38,67 @@ More infor here: https://wiki.polygon.technology/docs/develop/metamask/config-po
 
 More info here: https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain
 
+Verified: https://testnet.bscscan.com/address/0x21aFd026B7b06d88c23c8e6AfaC004D0F61a8760#code
+
+
+
+
+## Truffle
+#### Installation
+```sh
+npm install -g truffle
+cd Truffle
+npm i
+```
+
+#### Deployment
+```sh
+truffle compile
+truffle migrate --network DESIRED_NETWORK
+```
+
+#### Verification
+```sh
+truffle run verify DEPLOYED_CONTRACT_NAME@DEPLOYED_CONTRACT_ADDRESS --network DESIRED_NETWORK
+```
+
+#### Example with Goerli Network
+```sh
+truffle compile
+truffle migrate --network ethereum_goerli_testnet
+truffle run verify Notarization@0x... --network ethereum_goerli_testnet
+```
+
+
+## Hardhat
+
+#### Installation
+```sh
+npm init
+npm install --save-dev hardhat
+```
+
+#### Deployment
+```sh
+npx hardhat clean
+npx hardhat compile
+npx hardhat run ./scripts/deploy.ts --network DESIRED_NETWORK
+```
+
+#### Verification
+```sh
+npx hardhat verify --network DESIRED_NETWORK DEPLOYED_CONTRACT_ADDRESS
+```
+
+#### Example with Goerli Network
+```sh
+npx hardhat run ./scripts/deploy.ts --network ethereum_goerli_testnet
+npx hardhat verify --network ethereum_goerli_testnet 0x...
+
+```
+
 
 ## Remix
-
 
 #### Metamask: Network selection
 You have to select your preffered network form Metamask.
@@ -67,45 +128,3 @@ You will see an overview of the public/external functions of your already deploy
 You can directly execute your Smart Contract functions from the Remix web IDE for test purposes.
 
 <img src="https://ik.imagekit.io/alastria/functions_execution.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656492681737" alt="Remix3" width="400">
-
-
-## Truffle
-#### Installation
-```sh
-npm install -g truffle
-cd Truffle
-npm i
-```
-
-#### Deployment 
-```sh
-truffle compile
-truffle migrate --network DESIRED_NETWORK
-```
-
-#### Verification
-```sh
-npm install -D truffle-plugin-verify
-truffle run verify DEPLOYED_CONTRACT_NAME@DEPLOYED_CONTRACT_ADDRESS --network DESIRED_NETWORK
-```
-
-## Hardhat
-
-#### Installation
-```sh
-npm init
-npm install --save-dev hardhat
-```
-
-#### Deployment 
-```sh
-npx hardhat clean
-npx hardhat compile
-npx hardhat run ./scripts/deploy.ts --network DESIRED_NETWORK
-```
-
-#### Verification
-```sh
-npm install --save-dev @nomiclabs/hardhat-etherscan
-npx buidler verify --network DESIRED_NETWORK DEPLOYED_CONTRACT_ADDRESS "Constructor argument 1"
-```

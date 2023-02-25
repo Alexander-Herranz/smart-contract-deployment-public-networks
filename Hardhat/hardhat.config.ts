@@ -11,14 +11,22 @@ import "solidity-coverage";
 dotenv.config();
 
 const chainIds = {
-  t_alastria: 83584648538,
-  b_alastria: 2020
+  eth_goerli_id: 5,
+  polygon_mumbai_id: 80001,
+  bsc_testnet_id: 97
 };
 
 const { //This variables must be in the .env file, in order to work (like .env.example)
-  PRIVATE_KEY,
-  T_NODE_IP,
-  B_NODE_IP
+  SIGNER_PRIVATE_KEY,
+  ETH_GOERLI_TESTNET_RPC,
+  ETH_SCAN_API_KEY,
+  ETH_GOERLI_SCAN_WEB,
+  POLYGON_MUMBAI_TESTNET_RPC,
+  POLYGON_SCAN_API_KEY,
+  POLYGON_MUMBAI_SCAN_WEB,
+  BSC_TESTNET_RPC,
+  BSC_SCAN_API_KEY,
+  BSC_TESTNET_SCAN_WEB
 } = process.env;
 
 
@@ -32,22 +40,31 @@ const config: HardhatUserConfig = {
       optimizer: {
         enabled: true,
         runs: 200,
-      },
-      evmVersion: "byzantium"
+      }
     }
   },
   networks: {
-    t_alastria: {
-      url: `http:///${T_NODE_IP}:22000`,
-      chainId: chainIds.t_alastria,
-      gasPrice: 0,
-      accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : []
+    ethereum_goerli_testnet: {
+      url: ETH_GOERLI_TESTNET_RPC,
+      chainId: chainIds.eth_goerli_id,
+      accounts: SIGNER_PRIVATE_KEY !== undefined ? [SIGNER_PRIVATE_KEY] : []
     },
-    b_alastria: {
-      url: `http:///${B_NODE_IP}:8545`,
-      chainId: chainIds.b_alastria,
-      gasPrice: 0,
-      accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : []
+    polygon_mumbai_testnet: {
+      url: POLYGON_MUMBAI_TESTNET_RPC,
+      chainId: chainIds.polygon_mumbai_id,
+      accounts: SIGNER_PRIVATE_KEY !== undefined ? [SIGNER_PRIVATE_KEY] : []
+    },
+    binance_bsc_testnet: {
+      url: BSC_TESTNET_RPC,
+      chainId: chainIds.bsc_testnet_id,
+      accounts: SIGNER_PRIVATE_KEY !== undefined ? [SIGNER_PRIVATE_KEY] : []
+    }
+  },
+  etherscan: {
+    apiKey: {
+        goerli: ETH_SCAN_API_KEY,
+        polygonMumbai: POLYGON_SCAN_API_KEY,
+        bscTestnet: BSC_SCAN_API_KEY,
     }
   },
   mocha: {

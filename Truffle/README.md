@@ -1,4 +1,4 @@
-## Truffle Guide 
+## Truffle Guide
 
 #### Installation
 ```sh
@@ -7,14 +7,20 @@ cd Truffle
 npm i
 ```
 
-#### Deployment in T Network
+#### Deployment
 ```sh
 truffle compile
-truffle migrate --network alastriat
+truffle migrate --network DESIRED_NETWORK
 ```
 
-#### Deployment in B Network
+#### Verification
+```sh
+truffle run verify DEPLOYED_CONTRACT_NAME@DEPLOYED_CONTRACT_ADDRESS --network DESIRED_NETWORK
+```
+
+#### Example with Goerli Network
 ```sh
 truffle compile
-truffle migrate --network alastriab
+truffle migrate --network ethereum_goerli_testnet
+truffle run verify Notarization@0x... --network ethereum_goerli_testnet
 ```

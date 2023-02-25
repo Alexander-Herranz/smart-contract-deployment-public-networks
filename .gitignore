@@ -1,3 +1,4 @@
+
 build
 js-poc
 node_modules
@@ -5,4 +6,5 @@ test
 .DS_Store
 .gitattributes
 package-lock.json
-
+Truffle/.env.example
+Hardhat/.env.example
