@@ -83,6 +83,11 @@ truffle compile
 truffle migrate --network DESIRED_NETWORK
 ```
 
+#### Verification
+```sh
+npm install -D truffle-plugin-verify
+truffle run verify DEPLOYED_CONTRACT_NAME@DEPLOYED_CONTRACT_ADDRESS --network DESIRED_NETWORK
+```
 
 ## Hardhat
 
@@ -99,3 +104,8 @@ npx hardhat compile
 npx hardhat run ./scripts/deploy.ts --network DESIRED_NETWORK
 ```
 
+#### Verification
+```sh
+npm install --save-dev @nomiclabs/hardhat-etherscan
+npx buidler verify --network DESIRED_NETWORK DEPLOYED_CONTRACT_ADDRESS "Constructor argument 1"
+```
