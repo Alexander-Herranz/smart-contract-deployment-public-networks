@@ -27,8 +27,6 @@ These networks are specified in networks section in both files (you can add new 
 - **Faucet:** https://goerlifaucet.com/
 
 
-Verified: https://goerli.etherscan.io/address/0x8058D97E9b95374E11e270A008D9f57D6490Ba69#code
-
 ### Polygon Mumbai (testnet) information
 
 - **Network:** Polygon Mumbai
@@ -38,7 +36,7 @@ Verified: https://goerli.etherscan.io/address/0x8058D97E9b95374E11e270A008D9f57D
 - **Block explorer:** https://mumbai.polygonscan.com/
 - **Faucet:** https://faucet.polygon.technology/
 
-More infor here: https://wiki.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/
+More info here: https://wiki.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/
 
 ### Binance Smart Chain (testnet) information
 
@@ -50,10 +48,6 @@ More infor here: https://wiki.polygon.technology/docs/develop/metamask/config-po
 - **Faucet:** https://testnet.bnbchain.org/faucet-smart
 
 More info here: https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain
-
-Verified: https://testnet.bscscan.com/address/0x21aFd026B7b06d88c23c8e6AfaC004D0F61a8760#code
-
-
 
 
 ## Truffle
