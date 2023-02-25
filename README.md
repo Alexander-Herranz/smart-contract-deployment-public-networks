@@ -69,7 +69,6 @@ You can directly execute your Smart Contract functions from the Remix web IDE fo
 <img src="https://ik.imagekit.io/alastria/functions_execution.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656492681737" alt="Remix3" width="400">
 
 
-
 ## Truffle
 #### Installation
 ```sh
@@ -78,17 +77,12 @@ cd Truffle
 npm i
 ```
 
-#### Deployment in T Network
+#### Deployment 
 ```sh
 truffle compile
 truffle migrate --network DESIRED_NETWORK
 ```
 
-#### Deployment in B Network
-```sh
-truffle compile
-truffle migrate --network DESIRED_NETWORK
-```
 
 ## Hardhat
 
