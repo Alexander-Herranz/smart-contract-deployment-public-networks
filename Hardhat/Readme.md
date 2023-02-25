@@ -2,8 +2,8 @@
 
 #### Installation
 ```sh
-npm init
-npm install --save-dev hardhat
+cd Hardhat
+npm install
 ```
 
 #### Deployment
