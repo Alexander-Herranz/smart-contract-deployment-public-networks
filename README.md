@@ -83,8 +83,8 @@ truffle run verify Notarization@0x... --network ethereum_goerli_testnet
 
 #### Installation
 ```sh
-npm init
-npm install --save-dev hardhat
+cd Hardhat
+npm install
 ```
 
 #### Deployment
