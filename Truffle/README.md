@@ -3,8 +3,7 @@
 #### Installation
 ```sh
 npm install -g truffle
-cd Truffle
-npm i
+npm install
 ```
 
 #### Deployment
