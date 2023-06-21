@@ -19,17 +19,17 @@ If you have problems with RPC URLs (they change from time to time) check last on
 
 ## Testnet networks
 
-### Ethereum Goerli (testnet) information
+
+### Ethereum 2.0 (POS) testnet (Sepolia )
 
 - **Network:** Ethereum Goerli
-- **New RPC URL:** https://goerli.infura.io/v3/
-- **Chain ID:** 5
-- **Currency symbol:** ETH
-- **Block explorer:** https://goerli.etherscan.io/
-- **Faucet:** https://goerlifaucet.com/
+- **New RPC URL:** https://sepolia.infura.io/v3/
+- **Chain ID:** 11155111
+- **Currency symbol:** SepoliaETH
+- **Block explorer:** https://sepolia.etherscan.io/
+- **Faucet:** https://sepoliafaucet.com/
 
-
-### Polygon Mumbai (testnet) information
+### Polygon Mumbai (testnet) 
 
 - **Network:** Polygon Mumbai
 - **New RPC URL:** https://rpc-mumbai.maticvigil.com/
@@ -50,6 +50,16 @@ More info here: https://wiki.polygon.technology/docs/develop/metamask/config-pol
 - **Faucet:** https://testnet.bnbchain.org/faucet-smart
 
 More info here: https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain
+
+
+### Ethereum 1.0 Goerli (POW) testnet [To be deprecated]
+
+- **Network:** Ethereum Goerli
+- **New RPC URL:** https://goerli.infura.io/v3/
+- **Chain ID:** 5
+- **Currency symbol:** GoerliETH
+- **Block explorer:** https://goerli.etherscan.io/
+- **Faucet:** https://goerlifaucet.com/
 
 
 ## Truffle
